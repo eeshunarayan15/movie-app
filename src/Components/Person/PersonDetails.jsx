@@ -66,10 +66,10 @@ export const PersonDetails = () => {
           <i className="ri-arrow-go-back-fill" />
         </button>
       </nav>
-      <div className="w-full  flex gap-2 ">
+      <div className="w-full flex flex-col  md-flex gap-2 ">
         {/* Part 2: Left poster and details */}
         <div className="left ">
-          <div className="w-[12vw] rounded-lg overflow-hidden h-[35vh] ">
+          <div className="md-w-[14vw]  rounded-lg overflow-hidden h-[vh] ">
             <img
               src={`https://image.tmdb.org/t/p/w500${info.detail.profile_path}`}
               loading="lazy" // Browser ko bolte hain, "Bhai, tabhi load karo jab zarurat pade!"
@@ -165,7 +165,7 @@ export const PersonDetails = () => {
             </h1>
           </div>
         </div>
-        <div className=" w-[88vw] rounded-lg right">
+        <div className=" w-[vw] rounded-lg right">
           <h1 className="text-6xl text-zinc-400 font-black">
             {info.detail.name}
           </h1>
@@ -180,7 +180,7 @@ export const PersonDetails = () => {
             Movies & Shows
           </h1>
           {info?.combinedcredits?.cast?.length > 0 && (
-            <HorizontalCards
+            <HorizontalCards 
               trending={info.combinedcredits.cast}
               title="Filmography"
             />
